@@ -1,0 +1,32 @@
+Family Law App – Design Guidelines
+This document provides a set of design recommendations for a polished, user‑friendly version of your Ontario family‑law app. The goal is to make the experience clear, reassuring and accessible for self‑represented litigants while also encouraging upgrades to the paid tier. These guidelines draw on proven conversion‑rate optimisation (CRO) best practices, such as A/B testing, clear call‑to‑action design and reducing form friction.
+Visual identity
+Colour palette: Use a calming, professional colour scheme built around teal and navy blues with subtle gradients. Blue tones suggest trust and stability, which is important in legal services. Accents in purple or magenta can be used for primary call‑to‑action (CTA) buttons (see the hero example below).
+Typography: Choose a modern sans‑serif font family such as Inter or Roboto for readability. Use larger headings for section titles (e.g., 24–32 pt) and a 16 pt base font for body text. Maintain generous line spacing for legibility.
+Spacing and layout: Adopt a card‑based layout with plenty of white space. Each section (e.g., intake step, helpful information, upgrade offer) should sit in its own card with soft borders and subtle drop shadows to separate content. A single‑column layout is easier to scan, especially on mobile devices.
+Icons and illustrations: Use simple line icons to represent forms, court tips, deadlines and messaging. Avoid complex imagery that could distract from the content. A custom illustration can help anchor the hero section (see below).
+Homepage (free tools)
+Hero section: Start with a friendly headline and subheading that highlight the app’s purpose (“Start Your Case” / “Answer a few questions to get tailored legal guidance”). Add a short sentence explaining that the tool guides users through Ontario family‑law procedures in plain language.
+Navigation: Provide minimal navigation—perhaps a “Free Tools” menu and a highlighted “Upgrade to Pro” button. Avoid multiple competing links; dedicated landing pages convert better when distractions are removed.
+Intake wizard: Present questions one at a time in a multi‑step form. A progress bar (e.g., “Step 1 of 4: Case Details”) helps users understand the process. Keep forms short and only collect essential information; reducing the number of fields can significantly increase completions.
+Helpful information: Offer quick‑access cards linking to legal guides, court tips and key dates. Each card should have a concise title and icon.
+Premium call‑to‑action
+Value proposition: Clearly state what users gain by upgrading: “Generate court forms, draft affidavits, build a case timeline and get communication assistance.” Place this next to a friendly graphic (e.g. forms, gavel and calendar) and bullet‑point list.
+Transparent pricing: Emphasise the one‑time CAD $60 fee near the CTA. A strong, action‑oriented button such as “Upgrade Now” should stand out with a contrasting gradient or bold colour.
+Trust elements: Include a short reassurance such as “One‑time fee. Money‑back guarantee.” Adding testimonials or success stories builds credibility and can increase conversions.
+Placement: Position the premium offer after the free tools but still above the fold so users see it without scrolling. CTA buttons should appear multiple times on the page—in the hero, under the features list and at the bottom—to capture users at different points of engagement.
+Premium pages
+Document drafting: Use simple forms with helper text and example placeholders. Show a checklist or progress indicator to let users know how many sections remain. Provide a “Save and continue later” option.
+Timeline & reminders: Display upcoming deadlines in a vertical timeline or calendar component. Use badges or icons to differentiate types of events (filing deadlines, hearings, service dates). Integrate a toggle for email reminders.
+Communication assistant: Offer a text box where users can paste or write messages. Display suggested revisions in a split view—original on the left, “court‑safe” version on the right.
+Affidavit builder: Break the affidavit into logical sections (e.g., “Background,” “What you want the court to do”). Prompt users with questions and show a preview of the generated text.
+Accessibility and responsiveness
+Contrast and size: Ensure sufficient contrast between text and background. Buttons should be at least 44×44 px to be tap‑friendly on mobile.
+Keyboard navigation: All interactive elements must be reachable via keyboard for users with mobility impairments. Provide visible focus indicators.
+Responsive design: Use CSS Grid or Flexbox to adapt layouts gracefully to phones, tablets and desktop screens. The single‑column layout helps maintain consistency across breakpoints.
+Hero design concept
+Below is a concept image generated to illustrate the recommended style. It shows a minimal interface with a teal and purple palette, a step‑by‑step intake form, helpful information cards, and a prominent upgrade section. Use it as inspiration rather than a final design.
+Implementation notes
+Framework choice: Consider integrating a UI framework such as Tailwind CSS or Shadcn UI to expedite styling. Tailwind offers utility classes for spacing, colours and typography that match the aesthetic above. Shadcn UI provides pre‑built components that can be themed to your palette.
+A/B testing: When the design is live, implement A/B tests on headlines, CTA copy and colour to measure conversion improvements. Ensure tests run long enough and only change one variable at a time.
+Continuous improvement: Collect user feedback and usage metrics. Use this data to iteratively improve the interface and reduce friction, guided by CRO best practices.

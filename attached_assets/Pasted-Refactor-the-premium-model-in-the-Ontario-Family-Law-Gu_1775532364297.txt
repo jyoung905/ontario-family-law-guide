@@ -1,0 +1,118 @@
+Refactor the premium model in the Ontario Family Law Guide app from a single $60 one-time unlock into a tiered pricing system based on the investor memo.
+
+Context:
+The current app has one flat premium tier. We want to replace that with 4 product layers:
+
+1. Free
+- intake wizard
+- case overview
+- document analysis
+- personalized checklist
+- legal resources
+- basic AI chat
+
+2. Guided Help
+- personalized next-step plans
+- deeper issue-specific guidance
+- advanced AI answers
+- more detailed action plans
+Target price range: around $29+
+
+3. Prep Packs
+- issue-specific guided workflows
+- examples:
+  - I got served
+  - respond to a motion
+  - enforce an order
+  - parenting/access issues
+  - support issues
+  - section 7 expense issues
+  - court prep
+- includes structured workflow pages, document gathering lists, stronger prep tools
+Target price range: $79–$249 depending on pack
+
+4. Drafting Help
+- AI court form drafting
+- affidavit builder
+- filing package
+- communication coach
+- future lawyer-ready export
+Target price range: $299+
+
+Main goals:
+- make monetization feel aligned with progress
+- free helps users understand and organize
+- paid helps users prepare and produce
+- drafting is the highest-value tier
+- Communication Coach should sit inside Drafting Help, not lead the sale
+
+Product changes needed:
+
+A. Pricing architecture
+- remove the single “$60 one-time” model throughout the app
+- create a pricing config file that supports multiple tiers and multiple products
+- make the product system easy to update later without rewriting the UI
+
+B. RevenueCat integration
+- refactor useSubscription() to support multiple entitlements / product IDs
+- support:
+  - guided_help
+  - prep_pack_served
+  - prep_pack_motion
+  - prep_pack_enforcement
+  - drafting_help
+- do not hardcode one premium boolean only
+- replace with entitlement checks by feature
+
+C. Feature gating
+- gate features by tier instead of one premium lock
+- examples:
+  - advanced action plan = Guided Help
+  - served/motion/enforcement workflow packs = Prep Packs
+  - court form drafting / affidavit builder / filing package / coach = Drafting Help
+
+D. UI changes
+1. Paywall screen
+- replace current single paywall with a pricing screen that clearly shows the 3 paid layers:
+  - Guided Help
+  - Prep Packs
+  - Drafting Help
+- Drafting Help should be visually strongest
+- Prep Packs should feel scenario-specific
+- Guided Help should feel like a smaller first paid step
+
+2. Locked states
+- when a user taps a locked feature, show the correct tier paywall instead of one generic paywall
+- example:
+  - tapping “Draft my Form 10” should open Drafting Help paywall
+  - tapping “Respond to a motion workflow” should open Prep Pack paywall
+
+3. More / Premium pages
+- reorganize tools by tier
+- remove old one-price premium messaging
+
+E. App architecture
+- add a central tier/entitlement mapping file
+- each premium feature should declare what entitlement it needs
+- make this reusable across tabs and future features
+
+F. Copy direction
+Use language like:
+- Free: understand and organize
+- Guided Help: get a clearer plan
+- Prep Packs: follow a step-by-step workflow for your situation
+- Drafting Help: prepare your court documents yourself
+
+Important:
+- keep the app calm and trust-building
+- do not make the pricing page feel like aggressive SaaS upselling
+- document drafting remains the highest-value offer
+- keep the system scalable because more packs may be added later
+
+Deliverables:
+1. New entitlement/tier architecture
+2. Updated RevenueCat integration
+3. Refactored paywall UI
+4. Feature gating by tier
+5. Updated copy across the app
+6. Clean comments explaining where to add future packs

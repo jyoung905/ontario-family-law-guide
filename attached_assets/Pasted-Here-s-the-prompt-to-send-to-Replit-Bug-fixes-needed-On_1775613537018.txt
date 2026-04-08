@@ -1,0 +1,28 @@
+Here's the prompt to send to Replit:
+
+---
+
+**Bug fixes needed — Ontario Family Law app**
+
+Please fix the following issues found during testing:
+
+**1. Draft wizard doesn't advance after selecting a form (HIGH PRIORITY)**
+When a user clicks Form 8 or Form 10 in the Draft section, nothing happens. The wizard should advance from Step 1 (Select Form) to Step 2 (Describe Situation) with input fields appearing. Right now clicking a form card does not trigger any state change or screen transition. Fix the onPress/onClick handler on the form selection cards so selecting a form moves the wizard to the next step.
+
+**2. Upgrade/payment button does nothing (HIGH PRIORITY)**
+The $60 one-time upgrade button in the pricing section is visible but tapping it does nothing — no modal, no payment sheet, no navigation. Wire up the upgrade button to open the payment flow (Stripe, RevenueCat, or whatever payment provider is integrated). If payment is not yet integrated, at minimum show a "Coming soon" modal so users aren't confused.
+
+**3. Resources section missing from bottom navigation (MEDIUM)**
+The bottom nav shows: Home, My Case, Timeline, Draft, More. There is no Resources tab. If Resources is a feature, add it to the nav or make it clearly accessible from within one of the existing tabs. Currently users have no way to find it.
+
+**4. Ask AI — text input not accessible on web build (MEDIUM)**
+The AI assistant chat input field is not rendering as a standard HTML input on the web/Expo web build, so users on web cannot type questions. Ensure the TextInput component in the Ask screen renders with a proper accessible input on web (check platform-specific rendering or add a web fallback).
+
+**5. Intake flow — "Get Started" button doesn't visually scroll/transition to the intake questions**
+Clicking "Get Started" on the home screen doesn't visually navigate to a new screen — the issue selection options (Parenting & custody, Child support, etc.) appear but the screen doesn't scroll or transition, so it's unclear to users that something happened. Add a clear screen transition or scroll when intake begins.
+
+Please fix issues 1 and 2 first as they block the core user journey and monetization.
+
+---
+
+Send that as-is. Want me to also write a separate prompt for the AI logic/flow quality issues, or is this enough for now?

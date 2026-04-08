@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Guided Sanctuary | Ontario Family Law Assistance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Inter:wght@400;500;600&amp;family=Manrope:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#384950",
+                        "secondary": "#506168",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#9ecee1",
+                        "background": "#fcf9f2",
+                        "outline-variant": "#c0c8cc",
+                        "on-background": "#1c1c18",
+                        "surface-dim": "#dcdad3",
+                        "inverse-surface": "#31312c",
+                        "on-tertiary-fixed-variant": "#753229",
+                        "surface-tint": "#356476",
+                        "on-tertiary-container": "#e2897c",
+                        "primary-container": "#003d4d",
+                        "outline": "#71787c",
+                        "primary-fixed": "#baeafe",
+                        "tertiary-container": "#62231b",
+                        "surface": "#fcf9f2",
+                        "surface-bright": "#fcf9f2",
+                        "on-surface-variant": "#41484b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#002631",
+                        "surface-container-low": "#f6f3ec",
+                        "tertiary-fixed-dim": "#ffb4a9",
+                        "tertiary-fixed": "#ffdad5",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#0c1e24",
+                        "error": "#ba1a1a",
+                        "tertiary": "#450e09",
+                        "surface-container-high": "#ebe8e1",
+                        "on-surface": "#1c1c18",
+                        "on-error": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#194d5d",
+                        "on-secondary-container": "#54656d",
+                        "secondary-fixed": "#d3e5ee",
+                        "secondary-fixed-dim": "#b7c9d2",
+                        "surface-container-highest": "#e5e2db",
+                        "surface-variant": "#e5e2db",
+                        "inverse-primary": "#9ecee1",
+                        "surface-container": "#f1eee7",
+                        "on-primary-fixed": "#001f28",
+                        "secondary-container": "#d0e3eb",
+                        "on-primary": "#ffffff",
+                        "on-primary-container": "#79a8ba",
+                        "inverse-on-surface": "#f3f0e9",
+                        "on-tertiary-fixed": "#3c0704"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Manrope", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #fcf9f2;
+            background-image: radial-gradient(#00263105 1px, transparent 0);
+            background-size: 40px 40px;
+            font-family: 'Inter', sans-serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.04);
+        }
+        .serif-italic { font-family: 'Newsreader', serif; font-style: italic; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="text-on-surface selection:bg-primary-container selection:text-white">
+<!-- TopAppBar -->
+<header class="bg-[#fcf9f2]/85 dark:bg-[#002631]/85 backdrop-blur-xl flex justify-between items-center w-full px-6 py-4 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#002631] dark:text-[#fcf9f2] cursor-pointer hover:opacity-80 transition-opacity" data-icon="menu">menu</span>
+<span class="text-[#002631] dark:text-[#fcf9f2] font-serif italic text-xl">The Guided Sanctuary</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#450e09] dark:text-[#62231b] font-serif font-medium tracking-tight text-lg" href="#">Sanctuary</a>
+<a class="text-[#002631]/60 dark:text-[#fcf9f2]/60 font-serif font-medium tracking-tight text-lg hover:opacity-80 transition-opacity" href="#">Guidance</a>
+<a class="text-[#002631]/60 dark:text-[#fcf9f2]/60 font-serif font-medium tracking-tight text-lg hover:opacity-80 transition-opacity" href="#">Journal</a>
+<a class="text-[#002631]/60 dark:text-[#fcf9f2]/60 font-serif font-medium tracking-tight text-lg hover:opacity-80 transition-opacity" href="#">Settings</a>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center overflow-hidden border border-outline-variant/20">
+<img alt="Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a calm professional woman with a warm smile in soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUQSLpeMEczQ-_0oIGC2ZrzlS_B3MaCq5EJzWfDb7EOgLD3XnGos0rSsSc5dj96ju2P9_u0iiFgVlgDt2BTORjxIbl2rPAyR0cS5xs1MimGrl2qmul3LDSk2czu0w0TOMpssl8ebyhjyqjLz2fuMn-QXDLLPRNSrONNcyTjhm23jNTPkoty3O_kIYJe0LlwapCMDWcPi8Hvvou70sHxDAFziDnb1ksTGM6-wjArEnAfDPszjRCy_QL8fkBHUJ7tCWbDZKSTHo1sGQ"/>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 pt-12 pb-32">
+<!-- Hero Section -->
+<section class="relative grid grid-cols-1 md:grid-cols-12 gap-12 items-center mb-24">
+<div class="md:col-span-7 space-y-8">
+<h1 class="font-headline text-5xl md:text-7xl font-medium text-primary tracking-tight leading-[1.1]">
+                    Navigate your journey with <span class="serif-italic">confidence</span> and <span class="serif-italic">calm.</span>
+</h1>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed max-w-xl">
+                    Representing yourself in Ontario family court shouldn't feel like navigating a storm alone. We provide the map, the tools, and the dignity you deserve during legal transitions.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-primary text-white px-8 py-4 rounded-full font-label text-sm uppercase tracking-widest font-semibold hover:opacity-90 transition-all flex items-center gap-3 shadow-lg shadow-primary/10">
+                        Start Your Path
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<button class="bg-surface-container-lowest/50 backdrop-blur-sm border border-outline-variant/30 text-primary px-8 py-4 rounded-full font-label text-sm uppercase tracking-widest font-semibold hover:bg-surface-container-low transition-all">
+                        Learn More
+                    </button>
+</div>
+</div>
+<div class="md:col-span-5 relative">
+<!-- Asymmetric background shape -->
+<div class="absolute -top-12 -right-12 w-72 h-72 bg-tertiary-fixed-dim/30 rounded-full blur-3xl -z-10"></div>
+<div class="rounded-[2.5rem] overflow-hidden aspect-[4/5] editorial-shadow border-[12px] border-surface-container-lowest">
+<img alt="Calm environment" class="w-full h-full object-cover" data-alt="serene morning light filtering through a window onto a minimalist desk with a journal and a ceramic mug" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAr5nXyCS10va1S_eis8_lCx8X1pXeZXj4yFjEkh4zeck48BDK8VnqPYSJtrZL-BP4XkC3p33fQZVyLnresUnQQTNRVDDdp0OU_f9XC0iLHK1s5XKNSY805KhAezxfW7gM7CzVpNGzmnXhk-gjMtqHr-mtTVM2Mqt7M8u6_LMCXoBQBU0aUfgXyXQDd_GgCMLYweNA5yWAwCWTLTC-sqQYoWy6BcvJreyJecoGUX6Bfy38PuvTpCtb6l-AFGmjYyiyjegTDsKJJiAY"/>
+</div>
+</div>
+</section>
+<!-- Tools Section -->
+<section class="mb-32">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div class="max-w-2xl">
+<h2 class="font-label text-xs uppercase tracking-[0.2em] text-tertiary font-bold mb-4">Empowerment Tools</h2>
+<h3 class="font-headline text-4xl text-primary">Everything you need to move forward.</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1: Form Finder -->
+<div class="group bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 p-10 rounded-[2rem] flex flex-col items-start gap-6 editorial-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-primary transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-3xl" data-icon="description">description</span>
+</div>
+<div class="space-y-3">
+<h4 class="font-headline text-2xl font-semibold text-primary">Form Finder</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            Easily locate and organize the specific Ontario Family Court forms required for your unique case situation.
+                        </p>
+</div>
+<span class="mt-auto font-label text-xs uppercase tracking-widest text-primary flex items-center gap-2 font-bold group-hover:gap-4 transition-all">
+                        Explore Forms <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+<!-- Card 2: Legal Dictionary -->
+<div class="group bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 p-10 rounded-[2rem] flex flex-col items-start gap-6 editorial-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-tertiary transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-3xl" data-icon="book_2">book_2</span>
+</div>
+<div class="space-y-3">
+<h4 class="font-headline text-2xl font-semibold text-primary">Legal Dictionary</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            Plain-language translations of complex legal jargon, specifically curated for self-represented litigants.
+                        </p>
+</div>
+<span class="mt-auto font-label text-xs uppercase tracking-widest text-primary flex items-center gap-2 font-bold group-hover:gap-4 transition-all">
+                        Search Terms <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+<!-- Card 3: Process Map -->
+<div class="group bg-surface-container-low hover:bg-surface-container-lowest transition-all duration-500 p-10 rounded-[2rem] flex flex-col items-start gap-6 editorial-shadow cursor-pointer">
+<div class="w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center text-primary transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-3xl" data-icon="map">map</span>
+</div>
+<div class="space-y-3">
+<h4 class="font-headline text-2xl font-semibold text-primary">Process Map</h4>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                            Visual guides showing exactly where you are in the legal process and what steps are coming next.
+                        </p>
+</div>
+<span class="mt-auto font-label text-xs uppercase tracking-widest text-primary flex items-center gap-2 font-bold group-hover:gap-4 transition-all">
+                        View Map <span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+</span>
+</div>
+</div>
+</section>
+<!-- CTA Section: Upgrade to Pro -->
+<section class="relative bg-primary overflow-hidden rounded-[3rem] p-12 md:p-20 text-center">
+<!-- Decorative background element -->
+<div class="absolute top-0 right-0 w-96 h-96 bg-tertiary/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 max-w-3xl mx-auto space-y-8">
+<span class="font-label text-xs uppercase tracking-[0.3em] text-on-primary-container font-bold">Premium Sanctuary</span>
+<h2 class="font-headline text-4xl md:text-5xl text-white leading-tight">Expert support at every milestone.</h2>
+<p class="text-on-primary-container text-lg md:text-xl font-body opacity-90">
+                    Get document reviews from real lawyers, personalized scheduling alerts, and secure digital storage for all your sensitive documents.
+                </p>
+<div class="pt-6">
+<button class="bg-tertiary text-white px-10 py-5 rounded-full font-label text-sm uppercase tracking-widest font-bold hover:bg-tertiary-container transition-all shadow-2xl">
+                        Upgrade to Pro
+                    </button>
+<p class="mt-4 text-white/50 font-label text-xs tracking-wider">Cancel anytime. Trusted by over 2,000 families.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-0 w-full z-50 flex justify-around items-center px-6">
+<div class="bg-[#fcf9f2]/85 backdrop-blur-xl rounded-full w-full flex justify-around items-center py-4 px-2 shadow-[0px_8px_24px_rgba(0,0,0,0.06)] border border-outline-variant/10">
+<button class="flex flex-col items-center justify-center bg-[#003d4d] text-white rounded-full p-3 scale-110 -translate-y-2 transition-all">
+<span class="material-symbols-outlined" data-icon="home_max">home_max</span>
+<span class="font-sans uppercase tracking-widest text-[8px] font-semibold mt-1">Sanctuary</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#002631]/50 p-2 hover:text-[#450e09]">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-sans uppercase tracking-widest text-[8px] font-semibold mt-1">Guidance</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#002631]/50 p-2 hover:text-[#450e09]">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-sans uppercase tracking-widest text-[8px] font-semibold mt-1">Journal</span>
+</button>
+<button class="flex flex-col items-center justify-center text-[#002631]/50 p-2 hover:text-[#450e09]">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-sans uppercase tracking-widest text-[8px] font-semibold mt-1">Settings</span>
+</button>
+</div>
+</nav>
+<!-- NavigationDrawer (Example Hidden State) -->
+<div class="hidden fixed inset-y-0 left-0 w-80 z-[60] flex flex-col p-8 bg-[#f1eee7] rounded-r-3xl shadow-2xl" id="drawer">
+<div class="mb-12 flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-primary text-white flex items-center justify-center overflow-hidden">
+<img alt="User Portrait" class="w-full h-full object-cover" data-alt="professional user avatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfV3GZHSe6xLQMq0e4bF_rRRctNnCAfFqRYR-fcErMW7VEr6hQC6UsqczhsssH95nVCO5BDw1_dXM1SntIZezG4EYtMN5f0IjkWJyGzyHA-R36U21aN0sz4YPV_0LQrR_05ARXcvsrA0thAmK_cuFJStu_K-PM4ypmbWYczdV8-hD7L6DE-dOplH_IoCcJENcvtZeZgOP-vqFfuafKkdqObUT_iWhvsDpp6zFOgFzPmsvjOlvmCcKoeHZX-gfBCuGbEwCfFVKBwno"/>
+</div>
+<div>
+<h5 class="text-[#002631] font-serif font-bold text-lg">Your Journey</h5>
+<p class="text-xs font-label uppercase tracking-wider text-on-surface-variant">Ontario Family Law</p>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-4 text-[#450e09] font-bold italic bg-[#fcf9f2]/50 rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="folder_shared">folder_shared</span> My Case
+            </a>
+<a class="flex items-center gap-4 p-4 text-[#002631]/70 hover:bg-[#fcf9f2] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span> Legal Documents
+            </a>
+<a class="flex items-center gap-4 p-4 text-[#002631]/70 hover:bg-[#fcf9f2] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="diversity_2">diversity_2</span> Mediation Support
+            </a>
+<a class="flex items-center gap-4 p-4 text-[#002631]/70 hover:bg-[#fcf9f2] rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="support_agent">support_agent</span> Contact Expert
+            </a>
+</div>
+<div class="mt-auto pt-8 border-t border-outline-variant/20">
+<a class="flex items-center gap-4 p-4 text-error/70 hover:bg-error-container/20 rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span> Logout
+            </a>
+</div>
+</div>
+</body></html>

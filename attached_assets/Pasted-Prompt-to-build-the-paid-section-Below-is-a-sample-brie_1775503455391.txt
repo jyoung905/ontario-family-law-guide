@@ -1,0 +1,14 @@
+Prompt to build the paid section
+Below is a sample brief you could share with your developer or use as a prompt in Replit. It outlines the new features, how they should integrate into the existing app, and reminders about privacy and legal‑advice limitations:
+Goal: Add a paid tier to the Ontario family‑law app. Free users can still access intake, basic guidance, and the timeline overview. Paid subscribers unlock document‑generation features and enhanced tools.
+Features to build:
+Document drafting: Based on the user’s intake answers, generate draft versions of required Ontario family‑law forms (e.g. Form 10, Form 14B motions, Form 15B responses). Prefill the user’s known information and leave placeholders where additional details are needed.
+Affidavit/narrative builder: Create a structured affidavit outline using the facts the user provides. Emphasize that the user must review and edit it for accuracy and swear it before a commissioner.
+Detailed timeline & reminders: Expand the timeline to include filing deadlines, service requirements and recommended preparation tasks. Send reminder emails (or in‑app alerts) a week before each deadline.
+Communication coach: Offer AI‑generated draft texts or emails to the other party that maintain a polite, factual tone. Flag language that could harm their case.
+Payment gating: Integrate a basic subscription/payment check (for example, using Stripe) that unlocks these features only after a payment has been processed. A free trial (e.g. 7 days) can encourage sign‑ups.
+Data handling & legal disclaimer:
+– Continue to require users to redact personal identifiers before uploading documents. Ensure text is processed in memory and not stored.
+– Include a conspicuous statement that the app provides general information and drafts for the user to review and does not constitute legal advice.
+– Encourage users to consult a lawyer for personalised guidance.
+The new code should be integrated into the existing Next.js project, following its component structure. Use environment variables for any third‑party API keys (e.g. payment processor or OpenAI), and update the UI to clearly distinguish free vs. paid features.

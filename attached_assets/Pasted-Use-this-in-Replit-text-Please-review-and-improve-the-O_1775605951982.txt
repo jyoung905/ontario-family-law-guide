@@ -1,0 +1,145 @@
+Use this in Replit:
+
+```text
+Please review and improve the Ontario Family Law Guide app based on the following product/UX audit.
+
+Important context:
+- This app is for self-represented people in Ontario family court.
+- The users are often stressed, confused, and unfamiliar with legal language.
+- The app already has a strong concept and should NOT be rebuilt from scratch.
+- The goal is to make the flow clearer, smoother, more confidence-building, and more conversion-friendly.
+- Keep the tone calm, plain-language, supportive, and trustworthy.
+- Do not make it sound like a law firm or legal representation service.
+
+Main product issue:
+The biggest problem is not design polish, it is flow confidence. A stressed user must feel at each step:
+- I am in the right place
+- I understand what this means
+- I know what happens next
+- I can recover if I am unsure
+
+Please implement the following:
+
+1. Simplify the landing/start screen
+- Reduce cognitive load
+- Reduce text density
+- Make the first choice easier and calmer
+- Do not let free vs premium compete too strongly with the main path selection
+- Keep the main three entry options, but make them more scannable and easier to understand
+
+2. Improve the three entry pathways
+Current pathways:
+- I was served with papers
+- I’m starting a case
+- I have an existing case
+
+Please:
+- make each option easier to understand in plain English
+- add short helper descriptions/examples under each
+- make it clear what kind of user should choose each one
+
+3. Add stronger uncertainty handling throughout the app
+This is critical.
+Users often do not know:
+- what documents they received
+- what stage they are at
+- what terms mean
+- whether they are choosing the right branch
+
+Please add:
+- “Not sure” options where appropriate
+- reassurance that rough answers are okay
+- small helper text for legal terms
+- “What does this mean?” expandable explanations where useful
+
+4. Add branch confirmation after initial triage
+After the user answers the first key questions, show a short confirmation screen or summary such as:
+- what the app thinks their situation is
+- what it will help them do next
+- why this path was chosen
+
+The user should feel guided, not silently routed.
+
+5. Break down the “I have an existing case” branch
+This path is too broad and likely confusing.
+Please split it into narrower, more specific subpaths such as:
+- I need to respond to something
+- I already filed and have a next step coming up
+- I need help serving or filing something
+- I’m not sure what stage my case is at
+
+6. Improve progress/orientation throughout the experience
+On each screen, the user should understand:
+- what this step is for
+- what happens next
+- how many steps are left
+- whether they can go back safely
+
+Please strengthen:
+- progress indicators
+- step purpose copy
+- navigation confidence
+- orientation messaging
+
+7. Delay or soften premium pressure until after first value
+The app currently shows free vs premium early.
+Please keep premium visible, but make sure the user first feels:
+- understood
+- oriented
+- somewhat relieved
+before stronger premium pressure appears
+
+Premium should feel like:
+- now I want more help
+not:
+- pay before I trust this
+
+8. Rewrite premium feature descriptions to be outcome-based
+Current feature names may be too abstract.
+Please rewrite them into more concrete, user-centered outcomes.
+
+Example direction:
+Instead of abstract labels, use language like:
+- draft the forms you likely need
+- organize your affidavit chronology
+- prepare a clearer filing package
+- get step-by-step help with what to say and send
+
+9. Add scope clarity early
+Users may not know whether the app is for their exact situation.
+Please add a short section or helper text explaining:
+- what the app helps with
+- what it does not currently cover
+- that it is plain-language guidance, not legal representation
+
+10. Audit for wrong-path risk
+Please review all branching logic and UX for places where a confused user could:
+- choose the wrong path
+- get stuck
+- lose trust
+- fail to recover cleanly
+
+Where possible:
+- add recovery paths
+- allow easy backtracking
+- add confirmation before major branch commitments
+
+Implementation goals:
+- smoother first-run experience
+- more confidence for stressed users
+- clearer legal-language translation
+- stronger guidance without overcomplicating the app
+- better conversion from free user to premium user through trust and clarity
+
+Please make the changes directly in the app, not just suggest them.
+
+After making the changes, give me:
+1. a concise changelog
+2. any remaining weak points or open questions
+3. any parts of the flow that still need product decisions from me
+```
+
+If you want, I can also turn this into:
+- a **shorter Replit prompt**
+- a **Claude Code prompt**
+- or a **workspace file** like I made for the website

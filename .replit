@@ -1,0 +1,41 @@
+modules = ["nodejs-24"]
+
+[[artifacts]]
+id = "artifacts/api-server"
+
+[[artifacts]]
+id = "artifacts/mockup-sandbox"
+
+[deployment]
+router = "application"
+deploymentTarget = "autoscale"
+
+[deployment.postBuild]
+args = ["pnpm", "store", "prune"]
+env = { "CI" = "true" }
+
+[workflows]
+runButton = "Project"
+
+[agent]
+stack = "PNPM_WORKSPACE"
+expertMode = true
+integrations = ["revenuecat:1.0.0", "github:1.0.0"]
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
+
+[nix]
+channel = "stable-25_05"
+
+[userenv]
+
+[userenv.shared]
+EXPO_PUBLIC_REVENUECAT_TEST_API_KEY = "test_EfoRlJsmNSsyYZCTPftHCclLtlS"
+EXPO_PUBLIC_REVENUECAT_IOS_API_KEY = "appl_JaLCwzqQKDzBaPRMACrwGHQwBMg"
+EXPO_PUBLIC_REVENUECAT_ANDROID_API_KEY = "goog_bfKLsbXOESsmXRGOSwtgwgFdYKM"
+REVENUECAT_PROJECT_ID = "proj751469a0"
+REVENUECAT_TEST_STORE_APP_ID = "app8d3f5ed161"
+REVENUECAT_APPLE_APP_STORE_APP_ID = "appdff2f6ba60"
+REVENUECAT_GOOGLE_PLAY_STORE_APP_ID = "app1abf884659"

@@ -1,0 +1,21 @@
+How a CRO agent can improve wording and sales
+A conversion‑rate‑optimisation (CRO) consultant focuses on turning site visitors into paying customers. Below are evidence‑based best practices tailored for a legal‑information product:
+Area	Evidence‑based guidance	Application to your paid tier
+A/B testing	Law‑firm marketing experts note that guessing is a liability; A/B (split) testing compares two versions of a page element (headline, CTA button, etc.) to see which converts more visitors. Tests should isolate one variable at a time and run for at least one to two weeks to capture variations in user behaviour.	Ask the CRO agent to systematically test headlines (“Get ready for court in minutes” vs. “Avoid missing deadlines”) and button labels (“Create my court forms” vs. “Unlock my self‑help kit”). Measure sign‑ups and adjust based on data.
+CTA design and placement	Compelling call‑to‑action buttons are critical. For legal services, descriptive buttons (e.g., “Request Your Confidential Consultation”) are more persuasive than generic “Submit” buttons. Effective CTAs use action‑oriented, first‑person copy, strong visual contrast, and are placed above the fold and near value propositions.	Use a brightly coloured button that says “Unlock my case toolkit for $60” or “Draft my forms now” and place it prominently at the top and bottom of the landing page. Use a contrasting colour (e.g., teal) to draw the eye.
+Reduce form friction	Each extra field in a form increases abandonment. Reducing fields from 11 to 4 led to a 120 % conversion lift in one B2B case. Experts recommend single‑column layouts and only collecting essential information up front, moving optional details to later steps.	Keep the initial sign‑up form simple: name, email and a short description of the case. More detailed data can be gathered in the paid workflow after purchase. This lowers friction and encourages people to start the process.
+Clear value proposition & trust signals	Effective messaging should make it obvious what users will get when they take action and emphasise credibility. Testimonials and social proof build trust.	Craft copy that clearly states the benefits of the paid tier (“Generate your court forms, timeline and plain‑language explanations instantly”) and include quotes from satisfied beta testers. Add logos of trusted organisations or references to court‑approved forms to reassure users.
+Mobile optimisation	CTAs and forms must be easy to use on mobile devices.	Ensure the design is responsive, with large touch‑friendly buttons and fields.
+Suggested marketing wording
+A CRO agent can refine this wording through testing, but here’s a starting point for your landing page:
+Headline: “Handle your family‑law case with confidence—get court‑ready forms, deadlines and guidance for just $60.”
+Subheading: “Our AI‑powered tool helps you respond to court documents or start your own case. Draft official Ontario court forms, receive a personalized timeline, and learn what to expect in court—all in plain language.”
+CTA button: “Unlock my case toolkit for $60”
+Trust section: “Used by self‑represented litigants across Ontario. Our drafts follow Ontario Family Law Rules. Money‑back guarantee if you aren’t satisfied.”
+Privacy note: “Upload only redacted documents. We process your text securely and do not store personal data.”
+Next steps for implementation
+Define the paid workflow: Identify the forms and documents that the AI will draft (Form 10, 14B, 15B, 35.1, etc.) and design a simple post‑purchase questionnaire to collect required details.
+Integrate payment: Add a payment page that accepts a single CAD $60 fee per case. After payment, unlock document drafting, timeline, court expectations and communication‑coach tools.
+Add CRO tools: Use a platform like Google Optimize, Hotjar or Optimizely (free tiers are available) to run A/B tests on headlines, CTAs and form lengths.
+Gather feedback and testimonials: Encourage users to share their experience and use those comments as social proof on the landing page.
+Refine copy with a CRO professional: Hire a CRO consultant or marketer familiar with legal services to conduct research, run tests and iteratively improve messaging based on data

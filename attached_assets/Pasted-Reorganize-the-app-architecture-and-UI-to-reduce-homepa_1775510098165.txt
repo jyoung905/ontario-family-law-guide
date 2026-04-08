@@ -1,0 +1,81 @@
+Reorganize the app architecture and UI to reduce homepage clutter and make the product feel calm, structured, and step-by-step.
+
+Problem:
+The current homepage is overloaded. It is trying to be a marketing page, dashboard, case manager, and tool hub all at once. That creates confusion. This app is for self-represented family law users who are already overwhelmed. The experience must feel organized and calming.
+
+New information architecture:
+
+1. Public Homepage
+Purpose: explain the product and get users into the app
+This page should only contain:
+- clear headline
+- short explanation of who the app helps
+- founder credibility / trust block
+- how it works in 3 steps
+- free vs premium comparison
+- one main CTA
+Do NOT put case checklist, document workspace, uploads, or too many app tools on this page.
+
+2. App Shell
+After entering the app, create a clean application layout with:
+- top bar
+- hamburger menu on mobile and compact nav on desktop
+- minimal clutter
+- professional, calming design
+
+3. Navigation Menu
+The menu should include:
+- Dashboard
+- My Case
+- Documents
+- Timeline
+- Communication Coach
+- Court Prep
+- Upgrade
+- Help / Safety
+
+4. My Case page
+This should be the main operational page.
+Build it as a checklist-driven case workspace.
+This page should include:
+- case progress tracker
+- checklist of required steps
+- upload area for documents
+- missing items
+- next actions
+- deadlines
+- quick links into tools
+
+Checklist examples:
+- Complete intake
+- Upload documents
+- Review what this document means
+- Confirm deadlines
+- Start timeline
+- Add supporting evidence
+- Draft response / next form
+- Prepare filing package
+
+5. Separate tool pages
+Move each major function off the homepage and into dedicated pages:
+- Document analysis
+- Timeline / journal
+- Communication coach
+- Drafting help
+- Court prep
+
+Design direction:
+- calm, premium, simple, highly organized
+- fewer things per screen
+- stronger spacing and hierarchy
+- this is not a generic SaaS dashboard
+- it should feel like a guided legal workspace
+- plain language everywhere
+
+Main goal:
+The app should feel like:
+“I know where everything is. I know what to do next.”
+Not:
+“There is a lot happening.”
+
+Please redesign the layout, page structure, and navigation accordingly.
