@@ -138,13 +138,19 @@ Provide numbered paragraphs, suggest relevant exhibits, and note what additional
 });
 
 router.post("/coach-message", async (req, res) => {
-  const { situation, draftMessage } = req.body as {
+  const { situation, mode, draftMessage } = req.body as {
     situation: string;
+    mode?: string;
     draftMessage?: string;
   };
 
   if (!situation) {
     res.status(400).json({ error: "situation is required" });
+    return;
+  }
+
+  if (mode !== undefined && mode !== "draft" && mode !== "review") {
+    res.status(400).json({ error: "mode must be 'draft' or 'review'" });
     return;
   }
 

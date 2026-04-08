@@ -20,7 +20,7 @@ const BASE_URL = `https://${process.env.EXPO_PUBLIC_DOMAIN}`;
 export default function AffidavitScreen() {
   const colors = useColors();
   const isDark = useColorScheme() === "dark";
-  const { isSubscribed } = useSubscription();
+  const { hasPrepPack } = useSubscription();
   const { userRole } = useApp();
 
   const [facts, setFacts] = useState("");
@@ -28,12 +28,13 @@ export default function AffidavitScreen() {
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<ScrollView>(null);
 
-  if (!isSubscribed) {
+  if (!hasPrepPack) {
     return (
       <PremiumGate
         featureName="Affidavit Builder"
         description="Turn your facts into a structured affidavit outline, ready for your lawyer to review and for you to swear before a commissioner."
         icon="create-outline"
+        tier="prep_pack"
       />
     );
   }
@@ -51,6 +52,11 @@ export default function AffidavitScreen() {
           userRole: userRole === "served" ? "Respondent" : userRole === "serving" ? "Applicant" : "not specified",
         }),
       });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error((err as any).error ?? `Server error ${response.status}`);
+      }
 
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
@@ -74,7 +80,8 @@ export default function AffidavitScreen() {
         }
       }
     } catch (e) {
-      setResult("Error generating affidavit. Please try again.");
+      const msg = e instanceof Error ? e.message : "Something went wrong. Please try again.";
+      setResult(`⚠️ ${msg}`);
     } finally {
       setLoading(false);
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 100);

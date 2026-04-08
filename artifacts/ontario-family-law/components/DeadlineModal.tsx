@@ -40,11 +40,13 @@ export default function DeadlineModal({ visible, onClose }: DeadlineModalProps) 
 
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
+  const [dateError, setDateError] = useState("");
   const [description, setDescription] = useState("");
 
   const reset = () => {
     setTitle("");
     setDate("");
+    setDateError("");
     setDescription("");
   };
 
@@ -53,9 +55,41 @@ export default function DeadlineModal({ visible, onClose }: DeadlineModalProps) 
     onClose();
   };
 
+  // Accept "Month DD, YYYY", "YYYY-MM-DD", or "MM/DD/YYYY" and normalise to ISO
+  const parseDate = (raw: string): string | null => {
+    const trimmed = raw.trim();
+    // ISO format: 2026-04-15
+    if (/^\d{4}-\d{2}-\d{2}$/.test(trimmed)) {
+      const d = new Date(trimmed + "T00:00:00");
+      return isNaN(d.getTime()) ? null : trimmed;
+    }
+    // MM/DD/YYYY
+    const slash = trimmed.match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
+    if (slash) {
+      const iso = `${slash[3]}-${slash[1].padStart(2, "0")}-${slash[2].padStart(2, "0")}`;
+      const d = new Date(iso + "T00:00:00");
+      return isNaN(d.getTime()) ? null : iso;
+    }
+    // "April 15, 2026" or "Apr 15 2026"
+    const d = new Date(trimmed);
+    if (!isNaN(d.getTime())) {
+      const y = d.getFullYear();
+      const m = String(d.getMonth() + 1).padStart(2, "0");
+      const day = String(d.getDate()).padStart(2, "0");
+      return `${y}-${m}-${day}`;
+    }
+    return null;
+  };
+
   const handleAdd = () => {
     if (!title.trim() || !date.trim()) return;
-    addDeadline({ title: title.trim(), date: date.trim(), description: description.trim() });
+    const iso = parseDate(date);
+    if (!iso) {
+      setDateError("Enter a valid date — e.g. April 15, 2026 or 2026-04-15");
+      return;
+    }
+    setDateError("");
+    addDeadline({ title: title.trim(), date: iso, description: description.trim() });
     Haptics.notificationAsync(Haptics.NotificationFeedbackType.Success);
     reset();
     onClose();
@@ -136,18 +170,21 @@ export default function DeadlineModal({ visible, onClose }: DeadlineModalProps) 
                 onChangeText={setTitle}
               />
 
-              <View style={[styles.dateRow, { backgroundColor: colors.card, borderColor: date ? colors.primary : colors.border }]}>
-                <Ionicons name="calendar-outline" size={18} color={date ? colors.primary : colors.mutedForeground} />
+              <View style={[styles.dateRow, { backgroundColor: colors.card, borderColor: dateError ? "#dc2626" : date ? colors.primary : colors.border }]}>
+                <Ionicons name="calendar-outline" size={18} color={dateError ? "#dc2626" : date ? colors.primary : colors.mutedForeground} />
                 <TextInput
                   ref={dateRef}
                   style={[styles.dateInput, { color: colors.foreground }]}
-                  placeholder="Date — e.g. April 15, 2026"
+                  placeholder="e.g. April 15, 2026 or 2026-04-15"
                   placeholderTextColor={colors.mutedForeground}
                   value={date}
-                  onChangeText={setDate}
+                  onChangeText={(v) => { setDate(v); if (dateError) setDateError(""); }}
                   returnKeyType="next"
                 />
               </View>
+              {dateError ? (
+                <Text style={styles.dateErrorText}>{dateError}</Text>
+              ) : null}
 
               <TextInput
                 style={[styles.inputField, styles.textArea, { backgroundColor: colors.card, borderColor: colors.border, color: colors.foreground }]}
@@ -257,4 +294,10 @@ const styles = StyleSheet.create({
     marginTop: 4,
   },
   addBtnText: { fontSize: 16, fontWeight: "700" },
+  dateErrorText: {
+    fontSize: 12,
+    color: "#dc2626",
+    marginTop: -4,
+    paddingHorizontal: 2,
+  },
 });

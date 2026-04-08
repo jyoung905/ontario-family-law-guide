@@ -119,6 +119,11 @@ export default function DraftScreen() {
         body: JSON.stringify({ formType: selectedForm, userFacts: facts }),
       });
 
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error((err as any).error ?? `Server error ${response.status}`);
+      }
+
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
       if (!reader) throw new Error("No response stream");
@@ -140,8 +145,9 @@ export default function DraftScreen() {
           }
         }
       }
-    } catch {
-      setResult("Error generating document. Please try again.");
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Something went wrong. Please try again.";
+      setResult(`⚠️ ${msg}`);
     } finally {
       setLoading(false);
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 200);

@@ -21,7 +21,7 @@ type Mode = "draft" | "review";
 export default function CoachScreen() {
   const colors = useColors();
   const isDark = useColorScheme() === "dark";
-  const { hasDraftingHelp } = useSubscription();
+  const { hasGuidedHelp } = useSubscription();
 
   const [mode, setMode] = useState<Mode>("draft");
   const [situation, setSituation] = useState("");
@@ -30,13 +30,13 @@ export default function CoachScreen() {
   const [loading, setLoading] = useState(false);
   const scrollRef = useRef<ScrollView>(null);
 
-  if (!hasDraftingHelp) {
+  if (!hasGuidedHelp) {
     return (
       <PremiumGate
         featureName="Communication Coach"
         description="Draft or review messages to the other party. Flags language that could hurt your case and suggests professional alternatives."
         icon="chatbubbles-outline"
-        tier="drafting_help"
+        tier="guided_help"
       />
     );
   }
@@ -51,9 +51,15 @@ export default function CoachScreen() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           situation,
+          mode,
           draftMessage: mode === "review" ? draftMessage : undefined,
         }),
       });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error((err as any).error ?? `Server error ${response.status}`);
+      }
 
       const reader = response.body?.getReader();
       const decoder = new TextDecoder();
@@ -76,8 +82,9 @@ export default function CoachScreen() {
           }
         }
       }
-    } catch {
-      setResult("Error. Please try again.");
+    } catch (e) {
+      const msg = e instanceof Error ? e.message : "Something went wrong. Please try again.";
+      setResult(`⚠️ ${msg}`);
     } finally {
       setLoading(false);
       setTimeout(() => scrollRef.current?.scrollToEnd({ animated: true }), 200);

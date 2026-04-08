@@ -13,7 +13,7 @@ export const REVENUECAT_ENTITLEMENT_IDENTIFIER = "premium";
 // ─── Dev override ─────────────────────────────────────────────────────────────
 // Set to true to preview the app as a fully-paid user (bypasses all gates).
 // Set back to false to see the normal gated experience.
-const DEV_UNLOCK_ALL = true;
+const DEV_UNLOCK_ALL = false;
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Legacy single-entitlement kept for backward compat.

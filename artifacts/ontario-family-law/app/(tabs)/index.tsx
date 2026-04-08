@@ -372,6 +372,16 @@ function IntakeWizard({ onComplete }: { onComplete: () => void }) {
       {/* ── Step 3: Respondent info ── */}
       {step === OPTION_STEPS.length && (
         <View style={{ gap: 20 }}>
+          <TouchableOpacity
+            style={{ flexDirection: "row", alignItems: "center", gap: 6, alignSelf: "flex-start" }}
+            onPress={() => setInConfirm(true)}
+          >
+            <Ionicons name="chevron-back" size={16} color={colors.mutedForeground} />
+            <Text style={[s.skipLink, { color: colors.mutedForeground, fontFamily: "Inter_400Regular" }]}>
+              Back
+            </Text>
+          </TouchableOpacity>
+
           <View style={{ gap: 6 }}>
             <Text style={[s.intakeQ, { color: colors.foreground, fontFamily: "Newsreader_600SemiBold" }]}>
               Who is the other party?
@@ -434,6 +444,16 @@ function IntakeWizard({ onComplete }: { onComplete: () => void }) {
       {/* ── Step 4: Children ── */}
       {step === OPTION_STEPS.length + 1 && (
         <View style={{ gap: 20 }}>
+          <TouchableOpacity
+            style={{ flexDirection: "row", alignItems: "center", gap: 6, alignSelf: "flex-start" }}
+            onPress={() => setStep(OPTION_STEPS.length)}
+          >
+            <Ionicons name="chevron-back" size={16} color={colors.mutedForeground} />
+            <Text style={[s.skipLink, { color: colors.mutedForeground, fontFamily: "Inter_400Regular" }]}>
+              Back
+            </Text>
+          </TouchableOpacity>
+
           <View style={{ gap: 6 }}>
             <Text style={[s.intakeQ, { color: colors.foreground, fontFamily: "Newsreader_600SemiBold" }]}>
               Any children involved?
